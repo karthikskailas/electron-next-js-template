@@ -1,0 +1,42 @@
+appId: com.electron.next-template
+productName: My Electron App
+copyright: Copyright © 2026
+
+directories:
+  buildResources: build
+  output: dist
+
+files:
+  - out/**/*
+  - dist-electron/**/*
+  - package.json
+
+extraMetadata:
+  main: dist-electron/main/index.js
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: "${productName}-${version}-setup.${ext}"
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  artifactName: "${productName}-${version}.${ext}"
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  artifactName: "${productName}-${version}.${ext}"

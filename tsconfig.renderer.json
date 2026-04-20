@@ -1,0 +1,34 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "out/types/**/*.ts",
+    "src/app/**/*",
+    "src/renderer/**/*",
+    "src/shared/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "src/main/**/*",
+    "src/preload/**/*",
+    "node_modules",
+    "dist-electron"
+  ]
+}
