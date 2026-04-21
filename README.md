@@ -27,7 +27,7 @@ Building an Electron app with a modern React framework introduces complexity aro
 ### Installation
 
 ```bash
-git clone https://github.com/karthikskailas/electron-next-template.git my-app
+https://github.com/karthikskailas/electron-next-js-template.git my-app
 cd my-app
 npm install
 ```
